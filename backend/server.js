@@ -5,7 +5,8 @@ const cors = require("cors");
 
 const authRoutes = require("./routes/auth");
 const jobRoutes = require("./routes/jobs");
-
+const searchRoutes = require("./routes/search");
+const resumeRoutes = require("./routes/resume");
 const app = express();
 
 // Middleware
@@ -15,7 +16,8 @@ app.use(express.json());
 // Routes
 app.use("/api/auth", authRoutes);
 app.use("/api/jobs", jobRoutes);
-
+app.use("/api/search", searchRoutes);
+app.use("/api/resume", resumeRoutes);
 // Connect to MongoDB
 mongoose.connect(process.env.MONGODB_URI)
   .then(() => console.log("MongoDB Connected! ✅"))

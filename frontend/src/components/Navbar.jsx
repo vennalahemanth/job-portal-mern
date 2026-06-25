@@ -25,6 +25,8 @@ function Navbar() {
           <>
             <Link to="/login">Login</Link>
             <Link to="/register">Register</Link>
+            <Link to="/real-jobs">🌐 Live Jobs</Link>
+            <Link to="/resume-match">🤖 AI Match</Link>
           </>
         )}
       </div>
